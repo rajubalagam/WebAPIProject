@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pet Details</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.get("https://localhost:44345/api/pets", function (data) {
+
+                $.each(data, function (i, item) {
+                    var pet = "";
+                    $.each(item.names, function (i, cat) {
+                        pet = pet + "<li>" + cat + "</li>"
+                    });
+                    var rows =
+                        "<h5>" + item.gender + "</h5><ul>" +
+                        pet +
+                        "</ul>";
+
+                    $('#div').append(rows);
+                });
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <h2>Cats By Owner Gender</h2>
+
+    <div id="div">
+
+    </div>
+</body>
+</html>
+
+
+
+
