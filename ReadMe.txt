@@ -2,17 +2,31 @@
 Code Challenge:
 http://agl-developer-test.azurewebsites.net/
 
-Asp Net Core Version: 2.1.1
+Asp Net Core Version: 2.1
+Visual studio 2017
 
 The solution uses ASP.NET Core Web Application with "API" template with solution name "APICodeProject". 
 
 The solution contains Unit test project "APICodeProject.Tests"
 
-The client to consume the Web API is a Asp.Net core web application with project name "WebApplication".
+The client to consume the Web API is a plain static html file which is hosted on Web API project with name /wwwroot/PetDetails.html.
 
-Run the APICodeProject to see the json output format like below
+Build the entire solution.
+
+Run the APICodeProject to see the json output format under localhost url: https://localhost:44345/api/pets
 [{"gender":"Male","names":["Garfield","Jim","Max","Tom"]},{"gender":"Female","names":["Garfield","Simba","Tabby"]}]
 
-Run the test project to see the unit test cases success. 
+Open new tab and access the url: https://localhost:44345/petdetails.html
 
-Run the WebApplication project to see the output in expected format
+Cats By Owner Gender
+	Male
+	Garfield
+	Jim
+	Max
+	Tom
+Female
+	Garfield
+	Simba
+	Tabby
+
+Run the test project to see the unit test cases success. 
